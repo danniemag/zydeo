@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Zydeo</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zydeo | A Zype Video App</title>
+
+    <!-- Favicon -->
+    <%= favicon_link_tag 'favicon.png' %>
+
+    <!--Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,9 +19,14 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+  <body class="home">
+<!--    <p class="notice"><%#= notice %></p>-->
+<!--    <p class="alert"><%#= alert %></p>-->
+    <%= render 'partials/topnav' %>
+    <%#= yield %>
+
+    <%= render 'partials/sections' %>
+    <%= render 'partials/preloader' %>
+    <%= render 'partials/footer' %>
   </body>
 </html>

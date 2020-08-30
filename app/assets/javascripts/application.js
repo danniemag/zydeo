@@ -13,4 +13,11 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require_tree .
+//* require_tree .
+
+//= require template/jquery-3.2.1.min
+//= require template/bootstrap.min
+//= require template/jquery.jscroll.min
+//= require template/jquery.magnific-popup.min
+//= require template/bootstrap-select.min
+//= require template/theme
