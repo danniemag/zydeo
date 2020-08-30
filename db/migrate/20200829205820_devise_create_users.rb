@@ -7,6 +7,11 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
+      t.string :access_token
+      t.string :refresh_token
+      t.datetime :token_expires_at
+      t.boolean :expired_token
+
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
