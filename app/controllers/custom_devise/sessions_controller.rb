@@ -1,5 +1,5 @@
 class CustomDevise::SessionsController < Devise::SessionsController
-  include DeviseManager
+  include TokenManager
 
-  after_action :authenticate_zype_user
+  after_action :authenticate_provider_user
 end
