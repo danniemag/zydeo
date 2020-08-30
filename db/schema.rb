@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 2020_08_29_205820) do
     t.string "access_token"
     t.string "refresh_token"
     t.datetime "token_expires_at"
-    t.boolean "expired_token"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

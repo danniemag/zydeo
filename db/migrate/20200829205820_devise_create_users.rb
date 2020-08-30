@@ -10,7 +10,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :access_token
       t.string :refresh_token
       t.datetime :token_expires_at
-      t.boolean :expired_token
 
       ## Recoverable
       t.string   :reset_password_token
