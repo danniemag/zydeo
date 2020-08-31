@@ -4,5 +4,7 @@ Rails.application.routes.draw do
       registrations: "custom_devise/registrations"
   }
 
-  root to: "home#index"
+  resources :videos
+
+  root to: "videos#index"
 end

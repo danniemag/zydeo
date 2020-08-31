@@ -1,0 +1,34 @@
+<section class="row recent_uploads">
+  <div class="container">
+    <div class="row title_row">
+      <h3>recent uploads</h3>
+    </div>
+    <div class="row media-grid content_video_posts">
+      <% @videos['response'].each do |video| %>
+        <article class="col-sm-3 video_post postType3">
+          <div class="inner row m0">
+            <a href="single-video.html"><div class="row screencast m0">
+              <%= image_tag 'media/1.jpg', class: 'cast img-responsive' %>
+              <div class="play_btn"></div>
+              <div class="media-length"><%= Time.at(video['duration']).utc.strftime("%M:%S") %></div>
+            </div></a>
+            <div class="row m0 post_data" style="height: 175px">
+              <div class="category">
+                <a href="category.html">
+                  <%= image_tag 'icons/category.png' %>Art
+                </a>
+              </div>
+              <div class="row m0">
+                <a href="single-video.html" class="post_title">
+                  <%= video['title'] %>
+                </a>
+              </div>
+              <div class="fleft date">Published: <%= video['published_at'].to_date.strftime("%e %B, %Y") %></div>
+              <div class="fright views"><a href="#"><%= image_tag 'icons/views.png' %>3,45,346</a></div>
+            </div>
+          </div>
+        </article>
+      <% end %>
+    </div>
+  </div>
+</section> <!--Recent Upload-->

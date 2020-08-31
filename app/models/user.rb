@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  include UserSearch
+
   validates :email, uniqueness: { danger: "Email already exists." }
 
   # Include default devise modules. Others available are:

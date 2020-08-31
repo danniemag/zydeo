@@ -1,0 +1,98 @@
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <%= link_to root_path, class: 'navbar-brand' do %><%= image_tag 'logo-new.png', style: 'height: 32px' %><% end %>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#middle-menu" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="middle-menu">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="home_variation_icon"></span>Home variations
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home Page Version 1</a></li>
+            <li><a href="index2.html">Home Page Version 2</a></li>
+            <li><a href="index3.html">Home Page Version 3</a></li>
+            <li><a href="index4.html">Home Page Version 4</a></li>
+          </ul>
+        </li>
+        <li class="dropdown mega-drop">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="video_menu_icon"></span>Video Menu
+          </a>
+          <ul class="dropdown-menu mega-menu">
+            <li class="row_title">Staf Picked</li>
+            <li class="videos">
+              <div class="container">
+                <div class="col-sm-3">
+                  <div class="row inner m0">
+                    <div class="preview_img">
+                      <%= image_tag 'menu/1.jpg', class: 'preview' %>
+                      <a href="single-video.html" class="play-btn"></a>
+                    </div>
+                    <div class="title_row row m0"><a href="single-video.html">Duis aute irure dolor in adipsicing elit</a></div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="row inner m0">
+                    <div class="preview_img">
+                      <%= image_tag 'menu/2.jpg', class: 'preview' %>
+                      <a href="single-video.html" class="play-btn"></a>
+                    </div>
+                    <div class="title_row row m0"><a href="single-video.html">Duis aute irure dolor in adipsicing elit</a></div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="row inner m0">
+                    <div class="preview_img">
+                      <%= image_tag 'menu/3.jpg', class: 'preview' %>
+                      <a href="single-video.html" class="play-btn"></a>
+                    </div>
+                    <div class="title_row row m0"><a href="single-video.html">Duis aute irure dolor in adipsicing elit</a></div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="row inner m0">
+                    <div class="preview_img">
+                      <%= image_tag 'menu/4.jpg', class: 'preview' %>
+                      <a href="single-video.html" class="play-btn"></a>
+                    </div>
+                    <div class="title_row row m0"><a href="single-video.html">Duis aute irure dolor in adipsicing elit</a></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+    <ul class="nav navbar-nav navbar-right login_drop">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <% if user_signed_in? %>
+            <span class="login_icon"></span> <%= current_user.email %>
+          <% else %>
+            <span class="login_icon"></span> Connect
+          <% end %>
+        </a>
+      <ul class="dropdown-menu">
+        <% if user_signed_in? %>
+          <li><%= link_to 'Logout', destroy_user_session_path %></li>
+        <% else %>
+          <li><%= link_to 'Login', new_user_session_path %></li>
+          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+        <% end %>
+        </ul>
+      </li>
+    </ul>
+  </div><!-- /.container-fluid -->
+</nav> <!--Navigation-->

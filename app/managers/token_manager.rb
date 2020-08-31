@@ -10,13 +10,9 @@ module TokenManager
       @client = set_oauth_client
 
       if current_user.token_expires_at.nil?
-        response = @client.password.get_token(params[:user][:email], params[:user][:password])
+        response = get_token
       elsif current_user.token_expires_at <= Time.now
-        response = @client.request(:post,
-                                   'https://login.zype.com/oauth/token',
-                                   { params: { grant_type: 'refresh_token', refresh_token: current_user.refresh_token }}
-        )
-        response = JSON.parse(response.body)
+        response = JSON.parse(refresh_token.body)
       end
       set_token_params(response) if response
     rescue OAuth2::Error => e
@@ -50,5 +46,16 @@ module TokenManager
 
   def set_token_data(token_params)
     current_user.update_attributes(token_params)
+  end
+
+  def get_token
+    @client.password.get_token(params[:user][:email], params[:user][:password])
+  end
+
+  def refresh_token
+    @client.request(:post,
+                    'https://login.zype.com/oauth/token',
+                    { params: { grant_type: 'refresh_token', refresh_token: current_user.refresh_token }}
+    )
   end
 end
