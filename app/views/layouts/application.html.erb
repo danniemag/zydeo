@@ -23,10 +23,12 @@
 <!--    <p class="notice"><%#= notice %></p>-->
 <!--    <p class="alert"><%#= alert %></p>-->
     <%= render 'partials/topnav' %>
-    <%= render 'partials/slider' %>
+    <%= render 'partials/slider' unless slider_not_displayable %>
     <%= yield %>
-    <%= render 'partials/sections' %>
+    <% if content_is_displayable %>
+      <%= render 'partials/sections' %>
+      <%= render 'partials/footer' %>
+    <% end %>
     <%#= render 'partials/preloader' %>
-    <%= render 'partials/footer' %>
   </body>
 </html>
