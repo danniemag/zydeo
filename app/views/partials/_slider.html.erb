@@ -1,0 +1,88 @@
+<section class="row upload_media">
+  <div class="container">
+    <div class="row">
+      <h2>Welcome to Zydeo!</h2>
+      <h3>A Zype Video App</h3>
+      <div class="upload_media_row">
+        <form action="#" id="upload_media" class="videos_from">
+          <div class="inner row m0">
+            <h2>Sync Videos From</h2>
+            <a href="#"><%= image_tag 'button/youtube.png' %></a>
+            <a class="vimeo" href="#"><%= image_tag 'button/vimeo.png' %></a>
+            <a class="dailymotion" href="#"><%= image_tag 'button/dailymotion.png' %></a>
+          </div>
+        </form>
+        <a class="or_btn" href="#">or</a>
+        <form action="#" id="upload_media_2">
+          <div class="inner row m0">
+            <h2>Upload From PC</h2>
+            <h6>Via Frontend Uploader</h6>
+            <%= image_tag 'button/upload-1.png' %>
+            <h4>Select files to upload</h4>
+            <h5>or drag &amp; drop files</h5>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section> <!--Upload Form-->
+
+<section class="row">
+  <ul class="nav nav-justified ribbon">
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+  </ul>
+</section> <!--Ribbon-->
+
+<section class="row search_filter">
+  <div class="container">
+    <div class="row m0">
+      <!--Category Filter-->
+      <div class="btn-group category_filter fleft">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="filter-option pull-left">All Category</span>
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#"><span class="filter_text">All Categories</span><span class="badge"></span></a></li>
+          <li><a href="#"><span class="filter_text">Art</span><span class="badge">1200</span></a></li>
+          <li><a href="#"><span class="filter_text">astrology</span><span class="badge">650</span></a></li>
+          <li><a href="#"><span class="filter_text">biography</span><span class="badge">1200</span></a></li>
+          <li><a href="#"><span class="filter_text">comedy</span><span class="badge">650</span></a></li>
+          <li><a href="#"><span class="filter_text">entertainment</span><span class="badge">1200</span></a></li>
+          <li><a href="#"><span class="filter_text">photoshop</span><span class="badge">650</span></a></li>
+          <li><a href="#"><span class="filter_text">philosophy</span><span class="badge">1200</span></a></li>
+          <li><a href="#"><span class="filter_text">nano tube</span><span class="badge">650</span></a></li>
+        </ul>
+      </div>
+      <!--Post Type Filter-->
+      <div class="btn-group postTypeFilter fleft" data-toggle="buttons">
+        <label class="btn btn-primary postType1 active">
+          <input type="radio" name="postType" id="postType1" checked> All
+        </label>
+        <label class="btn btn-primary postType2">
+          <input type="radio" name="postType" id="postType2" > Videos
+        </label>
+        <label class="btn btn-primary postType3">
+          <input type="radio" name="postType" id="postType3" > Images
+        </label>
+        <label class="btn btn-primary postType4">
+          <input type="radio" name="postType" id="postType4" > Audios
+        </label>
+      </div>
+      <!--Search Form-->
+      <form action="#" role="search" class="search_form fright">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search Here" >
+          <span class="input-group-addon"><button type="submit">
+            <%= image_tag 'icons/search.png' %>
+          </button></span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
