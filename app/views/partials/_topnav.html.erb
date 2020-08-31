@@ -73,18 +73,6 @@
             </li>
           </ul>
         </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <span class="extra_pages_icon"></span>Extra pages
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="login.html">Login</a></li>
-            <li><a href="signup-popup.html">Sign Up</a></li>
-            <li><a href="single-video.html">Single Video</a></li>
-            <li><a href="page-author.html">Auther Profile</a></li>
-            <li><a href="category.html">Category Page</a></li>
-          </ul>
-        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
     <ul class="nav navbar-nav navbar-right login_drop">
@@ -93,7 +81,7 @@
           <% if user_signed_in? %>
             <span class="login_icon"></span> <%= current_user.email %>
           <% else %>
-            <span class="login_icon"></span> LOGIN
+            <span class="login_icon"></span> Connect
           <% end %>
         </a>
       <ul class="dropdown-menu">
@@ -101,6 +89,7 @@
           <li><%= link_to 'Logout', destroy_user_session_path %></li>
         <% else %>
           <li><%= link_to 'Login', new_user_session_path %></li>
+          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
         <% end %>
         </ul>
       </li>
