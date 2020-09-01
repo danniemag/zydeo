@@ -46,3 +46,5 @@ _____________________
 on Google Images I happened to find this logo, which was exactly what I meant for this context. The original can be 
 found at [`https://www.squadhelp.com/name/zydeo`](https://www.squadhelp.com/name/zydeo) (as it's being sold, it means
 probably copyrighted...)
+
+- Template: [`http://uxart.io/downloads/metavideo-html/index.html`](http://uxart.io/downloads/metavideo-html/index.html)
