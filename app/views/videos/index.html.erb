@@ -26,7 +26,8 @@
                   <% end %>
                 </div>
                 <div class="fleft date">Published: <%= video['published_at'].to_date.strftime("%e %B, %Y") %></div>
-                <div class="fright views"><a><%= image_tag 'icons/views.png' %>3,45,346</a></div>
+                <div class="fright views">
+                  <%= image_tag 'icons/views.png' if subscription_required(video) %></div>
               </div>
             </div>
           </article>
