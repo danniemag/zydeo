@@ -1,0 +1,143 @@
+<section class="row page_cover">
+  <div class="container">
+    <div class="row m0">
+      <h1><%= @video['title'] %></h1>
+    </div>
+  </div>
+</section>
+
+<section class="row">
+  <ul class="nav nav-justified ribbon">
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+  </ul>
+</section> <!--Ribbon-->
+
+<section class="row post_page_sidebar post_page_sidebar1">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 post_page_uploads">
+        <div class="author_details post_details row m0">
+          <div class="embed-responsive <%=displayable_video_class(@video)%>">
+            <% if video_is_playable(@video) %>
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%=@video['youtube_id']%>"></iframe>
+            <% else %>
+              <%= image_tag @video['thumbnails'][1]['url'] %>
+            <% end %>
+          </div>
+          <div class="row post_title_n_view">
+            <h2 class="col-sm-8 post_title"><%= @video['title'] %></h2>
+          </div>
+          <div class="media bio_section">
+            <div class="media-left about_social">
+              <div class="row m0 section_row author_section widget widget_recommended_to_follow">
+                <div class="media">
+                  <div class="media-body">
+                    <h5><%= 'Subscription Required' if subscription_required(@video) %></h5>
+                    <div class="btn-group">
+                      <% if !video_is_playable(@video) %>
+                        <%= link_to 'Login', new_user_session_path, class: 'btn follow' %>
+                        <a class='btn follow'>Subscribe</a>
+                      <% else %>
+                        <a class='btn follow'><%= @video['_id'] %></a>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row m0 about_section section_row single_video_info">
+                <h2 class="col-sm-4 view_count">
+                  <small>Duration</small> <%= Time.at(@video['duration']).utc.strftime("%M:%S") %>
+                </h2>
+                <br/>
+              </div>
+              <div class="row m0 about_section section_row single_video_info">
+                <dl class="dl-horizontal">
+                  <dt>Publish Date:</dt>
+                  <dd><%= @video['published_at'].to_date.strftime("%e %B, %Y") %></dd>
+
+                  <dt>Category:</dt>
+                  <dd><%= @video['categories'].first['title'] %></dd>
+                </dl>
+              </div>
+            </div>
+            <div class="media-body author_desc_by_author">
+              <p><%= @video['description'] %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 sidebar sidebar2">
+        <div class="row m0 sidebar_row_inner">
+          <!--Search Form-->
+          <form class="search_form row m0 comment_form back_button">
+            <div class="input-group">
+              <%= link_to 'Back to home', :back, class: 'btn btn default' %>
+            </div>
+          </form>
+          <!--Sponsored Area-->
+          <div class="row m0 widget widget_sponsored_area">
+            <h5 class="widget_title">sponsored area</h5>
+            <div class="row m0 inner">
+              <div class="row m0 advertise_betweeen_uploads">
+                <div class="inner row m0">
+                  <h3>Advertise<br>Here</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--More From the Author-->
+          <div class="row m0 widget widget_popular_videos">
+            <h5 class="widget_title">more from the author</h5>
+            <div class="row m0 inner">
+              <div class="media">
+                <div class="media-left"><a href="single-video.html"><img src="images/popular/1.jpg" alt=""><span class="duration">17:30</span></a></div>
+                <div class="media-body">
+                  <a href="single-video.html">
+                    <h5>Lorem ipsum dolor si amet etur adipis</h5>
+                  </a>
+                  <div class="row m0 meta_info views">34,000 views</div>
+                  <div class="row m0 meta_info posted">1 year ago</div>
+                </div>
+              </div>
+              <div class="media">
+                <div class="media-left"><a href="single-video.html"><img src="images/popular/2.jpg" alt=""><span class="duration">17:30</span></a></div>
+                <div class="media-body">
+                  <a href="single-video.html">
+                    <h5>Lorem ipsum dolor si amet etur adipis</h5>
+                  </a>
+                  <div class="row m0 meta_info views">34,000 views</div>
+                  <div class="row m0 meta_info posted">1 year ago</div>
+                </div>
+              </div>
+              <div class="media">
+                <div class="media-left"><a href="single-video.html"><img src="images/popular/3.jpg" alt=""><span class="duration">17:30</span></a></div>
+                <div class="media-body">
+                  <a href="single-video.html">
+                    <h5>Lorem ipsum dolor si amet etur adipis</h5>
+                  </a>
+                  <div class="row m0 meta_info views">34,000 views</div>
+                  <div class="row m0 meta_info posted">1 year ago</div>
+                </div>
+              </div>
+              <div class="media">
+                <div class="media-left"><a href="single-video.html"><img src="images/popular/4.jpg" alt=""><span class="duration">17:30</span></a></div>
+                <div class="media-body">
+                  <a href="single-video.html">
+                    <h5>Lorem ipsum dolor si amet etur adipis</h5>
+                  </a>
+                  <div class="row m0 meta_info views">34,000 views</div>
+                  <div class="row m0 meta_info posted">1 year ago</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> <!--Uploads-->

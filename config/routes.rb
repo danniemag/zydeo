@@ -4,7 +4,7 @@ Rails.application.routes.draw do
       registrations: "custom_devise/registrations"
   }
 
-  resources :videos
+  resources :videos, only: [:index, :show]
 
   root to: "videos#index"
 end
