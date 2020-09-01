@@ -631,6 +631,7 @@ button:hover {
   padding: 15px;
 }
 .video_post .inner {
+  height: 335px;
   box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.09);
   background: #fff;
   border-bottom: 0;
