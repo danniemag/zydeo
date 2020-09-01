@@ -1,6 +1,6 @@
 require 'active_support/concern'
 
-module TokenManager
+module TokensManager
   extend ActiveSupport::Concern
 
   def authenticate_provider_user
