@@ -22,8 +22,8 @@ _____________________
 ### Controllers
 ```sh
 Name            Description
-Registrations   Inherits behavior from controller Devise::Registrations and overrides it to include TokenManager
-Sessions        Inherits behavior from controller Devise::Sessions and overrides it to include TokenManager
+Registrations   Inherits behavior from controller Devise::Registrations and overrides it to include TokensManager
+Sessions        Inherits behavior from controller Devise::Sessions and overrides it to include TokensManager
 Videos          Implements actions to display all of the available videos and a single one (index | show)
 ```
 ### Models
@@ -35,7 +35,7 @@ User            Persists users information used to log in the local system and a
 ### Managers
 ```sh
 Name            Description
-Token           Implements logic that consumes Zype API and deals with all tasks related to user authentication
+Tokens          Implements logic that consumes Zype API and deals with all tasks related to user authentication
 Videos          Implements logic that consumes Zype API and deals with all tasks related to video retrieving
 ```
 _____________________

@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  include TokenManager
+  include TokensManager
 
   protect_from_forgery with: :exception
   before_action :authenticate_user!
