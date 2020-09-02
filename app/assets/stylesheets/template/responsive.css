@@ -243,7 +243,7 @@
         box-shadow: none;
     }
     .navbar .container .navbar-nav li.dropdown.open a:after {
-        background-image: url(../../images/icons/dropdown-arrow-hover.png);
+        background-image: url("icons/dropdown-arrow-hover.png");
     }
     .navbar .container .navbar-nav li.dropdown.open .dropdown-menu {
         display: block;
@@ -302,7 +302,7 @@
         box-shadow: none;
     }
     .navbar.navbar-fixed-top .container .navbar-nav li.dropdown.open a:after {
-        background-image: url(../../images/icons/dropdown-arrow-hover.png);
+        background-image: url("icons/dropdown-arrow-hover.png");
     }
     .navbar.navbar-fixed-top .container .navbar-nav li.dropdown.open .dropdown-menu {
         display: block;
