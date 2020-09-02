@@ -1,7 +1,7 @@
-![Zydeo Logo](https://www.squadhelp.com/story_images/visual_images/1594159828-zydeo2%20image1.jpg)
-
 # Zydeo*
-A Ruby on Rails to consume Zype REST API, display some videos and do some cool stuff. :)
+A Ruby on Rails app to consume Zype REST API, display some videos and do some cool stuff. :)
+
+![Zydeo Logo](https://www.squadhelp.com/story_images/visual_images/1594159828-zydeo2%20image1.jpg)
 _____________________
 ### Running up project externally
 A working demo of this project can be found at [`localhost:3000`](http://localhost:3000)
