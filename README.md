@@ -4,9 +4,10 @@ A Ruby on Rails app to consume Zype REST API, display some videos and do some co
 ![Zydeo Logo](https://www.squadhelp.com/story_images/visual_images/1594159828-zydeo2%20image1.jpg)
 _____________________
 ### Running up project externally
-A working demo of this project can be found at [`localhost:3000`](http://localhost:3000)
+A working demo of this project can be found at [`https://zydeo.herokuapp.com/`](https://zydeo.herokuapp.com/)
 
-Plus, a video of the author presenting the project can be seen at [`localhost:3000`](http://localhost:3000)
+Plus, a video of the author presenting the website and describing the application can be seen 
+at [`https://www.loom.com/share/b6cc8eafb8344ef898970c0e6d796ac8`](https://www.loom.com/share/b6cc8eafb8344ef898970c0e6d796ac8)
 
 ### Setting up project locally
   * Clone this project
