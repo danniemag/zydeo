@@ -13,19 +13,8 @@
  *= require_tree .
  *= require_self
  */
-//@import "template/*";
 
-
-@import "http://uxart.io/downloads/metavideo-html/css/bootstrap.min.css";
-//@import "http://uxart.io/downloads/metavideo-html/css/bootstrap-theme.min.css";
-//@import "http://uxart.io/downloads/metavideo-html/css/magnific-popup.css";
-//@import "http://uxart.io/downloads/metavideo-html/css/magnific-popup.css";
-//@import "http://uxart.io/downloads/metavideo-html/vendors/font-awesome/css/font-awesome.min.css";
-//@import "http://uxart.io/downloads/metavideo-html/vendors/bootstrap-select/css/bootstrap-select.min.css";
-////
-
-
-//@import "template/bootstrap.min";
+@import "template/bootstrap.min";
 @import "template/bootstrap-theme.min";
 @import "template/magnific-popup";
 @import "template/font-awesome.min";
