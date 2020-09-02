@@ -20,8 +20,6 @@
   </head>
 
   <body class="home">
-<!--    <p class="notice"><%#= notice %></p>-->
-<!--    <p class="alert"><%#= alert %></p>-->
     <%= render 'partials/topnav' %>
     <%= render 'partials/slider' unless slider_not_displayable %>
     <%= yield %>
@@ -29,6 +27,5 @@
       <%= render 'partials/sections' %>
       <%= render 'partials/footer' %>
     <% end %>
-    <%#= render 'partials/preloader' %>
   </body>
 </html>
